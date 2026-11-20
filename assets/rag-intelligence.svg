@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 466" width="1024" height="466">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0d14"/>
+      <stop offset="100%" stop-color="#141422"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6a11cb"/>
+      <stop offset="100%" stop-color="#2575fc"/>
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1024" height="466" fill="url(#bgGrad)"/>
+
+  <!-- Left Sidebar: Document Management & Vector Store -->
+  <rect x="0" y="0" width="260" height="466" fill="#090a0f" stroke="#222230" stroke-width="1"/>
+  
+  <text x="24" y="44" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700">Document Store</text>
+  <rect x="24" y="60" width="212" height="34" rx="8" fill="#1b1c28" stroke="#313245" stroke-width="1"/>
+  <text x="42" y="82" fill="#a0aec0" font-family="sans-serif" font-size="12">+ Upload Knowledge PDF</text>
+
+  <!-- Uploaded Files List -->
+  <g transform="translate(24, 114)">
+    <rect width="212" height="38" rx="6" fill="#151722" stroke="#2a2c3d" stroke-width="1"/>
+    <circle cx="20" cy="19" r="6" fill="#10b981"/>
+    <text x="34" y="23" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="600">Enterprise_Report_2026.pdf</text>
+
+    <rect y="48" width="212" height="38" rx="6" fill="#151722" stroke="#2a2c3d" stroke-width="1"/>
+    <circle cx="20" cy="67" r="6" fill="#10b981"/>
+    <text x="34" y="71" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="600">API_Architecture_Spec.docx</text>
+
+    <rect y="96" width="212" height="38" rx="6" fill="#151722" stroke="#2a2c3d" stroke-width="1"/>
+    <circle cx="20" cy="115" r="6" fill="#10b981"/>
+    <text x="34" y="119" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="600">ChromaDB_Embeddings.json</text>
+  </g>
+
+  <!-- Vector DB Metric -->
+  <g transform="translate(24, 380)">
+    <rect width="212" height="60" rx="10" fill="#12131d" stroke="#252738" stroke-width="1"/>
+    <text x="16" y="24" fill="#718096" font-family="sans-serif" font-size="10" font-weight="700">CHROMA VECTOR STORE</text>
+    <text x="16" y="44" fill="#ff6b35" font-family="sans-serif" font-size="14" font-weight="800">4,820 Embeddings Indexed</text>
+  </g>
+
+  <!-- Main Chat Window Area -->
+  <!-- Top App Header -->
+  <rect x="260" y="0" width="764" height="64" fill="url(#headerGrad)"/>
+  <text x="290" y="38" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="800">RAG Document Intelligence</text>
+  <rect x="830" y="18" width="170" height="28" rx="14" fill="rgba(255,255,255,0.2)"/>
+  <text x="850" y="36" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">Hybrid Search: ChromaDB + LLM</text>
+
+  <!-- Chat Content Messages -->
+  <!-- User Query -->
+  <g transform="translate(420, 96)" filter="url(#cardShadow)">
+    <rect width="570" height="52" rx="14" fill="#2d3748"/>
+    <text x="20" y="31" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="500">What are the key technical architectural advantages outlined in section 4?</text>
+  </g>
+
+  <!-- AI RAG Response -->
+  <g transform="translate(290, 168)" filter="url(#cardShadow)">
+    <rect width="700" height="180" rx="16" fill="#13151f" stroke="#2d3145" stroke-width="1"/>
+    
+    <!-- AI Avatar Badge -->
+    <rect x="20" y="16" width="28" height="28" rx="8" fill="url(#accentGlow)"/>
+    <text x="28" y="34" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="800">AI</text>
+    <text x="56" y="34" fill="#cbd5e1" font-family="sans-serif" font-size="12" font-weight="700">Contextual Answer (Retrieved via ChromaDB &bull; Similarity: 0.94)</text>
+
+    <!-- Content Text -->
+    <text x="20" y="74" fill="#e2e8f0" font-family="sans-serif" font-size="13" line-height="1.5">Based on <tspan fill="#ff6b35" font-weight="700">API_Architecture_Spec.docx (pp. 14-16)</tspan>, the primary advantages are:</text>
+    <text x="28" y="104" fill="#cbd5e1" font-family="sans-serif" font-size="12">&bull; <tspan font-weight="700" fill="#ffffff">Sub-second Latency:</tspan> FastAPI async streaming reduces end-to-end token latency by 68%.</text>
+    <text x="28" y="128" fill="#cbd5e1" font-family="sans-serif" font-size="12">&bull; <tspan font-weight="700" fill="#ffffff">Dense-Sparse Hybrid Retrieval:</tspan> ChromaDB cosine distance reranked with Cross-Encoder.</text>
+    <text x="28" y="152" fill="#cbd5e1" font-family="sans-serif" font-size="12">&bull; <tspan font-weight="700" fill="#ffffff">Multi-Model Agnostic Fallback:</tspan> Dynamic routing between Gemini 1.5, Llama 3.3, and Qwen.</text>
+  </g>
+
+  <!-- Query Input Box at Bottom -->
+  <g transform="translate(290, 384)">
+    <rect width="700" height="54" rx="27" fill="#161824" stroke="#35384d" stroke-width="1.5"/>
+    <text x="28" y="33" fill="#718096" font-family="sans-serif" font-size="13">Ask anything about your uploaded documents...</text>
+    <rect x="914" y="8" width="64" height="38" rx="19" fill="url(#accentGlow)"/>
+    <text x="932" y="32" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="800">&rarr;</text>
+  </g>
+</svg>

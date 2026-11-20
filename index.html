@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sujith — Full-Stack & AI Developer | Product Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Fullscreen Fixed Video Canvas (Sujith's 238-frame cinematic portrait) -->
+  <div class="canvas-viewport" aria-hidden="true">
+    <canvas id="scroll-canvas" role="img" aria-label="Fullscreen smooth scrolling video portrait"></canvas>
+    <div class="canvas-ambient-tint"></div>
+  </div>
+
+  <!-- Main Scrollable Content Container -->
+  <div class="content-wrapper">
+
+    <!-- Top Navigation Bar -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#hero" class="brand-logo">SUJITH</a>
+
+        <nav class="nav-links">
+          <a href="#hero" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <a href="#contact" class="btn-touch header-desktop-cta">
+          <span>Get in touch</span>
+          <span class="touch-arrow">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M2 5H8M8 5L5 2M8 5L5 8" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer / Dropdown -->
+      <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+        <nav class="mobile-nav-links">
+          <a href="#hero" class="mobile-nav-link active">Home</a>
+          <a href="#about" class="mobile-nav-link">About</a>
+          <a href="#projects" class="mobile-nav-link">Projects</a>
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+        <a href="#contact" class="btn-touch mobile-nav-cta">
+          <span>Get in touch</span>
+          <span class="touch-arrow">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <path d="M2 5H8M8 5L5 2M8 5L5 8" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </header>
+
+    <!-- SECTION 1: HERO SECTION (Transparent over the video portrait) -->
+    <section id="hero" class="section-hero">
+      <div class="hero-content">
+        <div class="hero-top-row">
+          <!-- Left: Headline & Identity -->
+          <div class="hero-left">
+            <span class="hero-subtitle">Hey, I'm Sujith</span>
+            <h1 class="hero-title">Full-Stack<br>Developer</h1>
+            <p class="hero-identity-tag">AI & Data Science Student &bull; AI Developer &bull; Entrepreneur</p>
+          </div>
+
+          <!-- Right: Statement & Pitch -->
+          <div class="hero-right">
+            <p class="hero-quote">I turn ideas into digital products.</p>
+            <p class="hero-desc">
+              From intuitive interfaces to intelligent backend systems, I build modern digital experiences that solve real-world problems.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom 4 Columns: Core Pillars -->
+        <div class="hero-services">
+          <div class="service-box">
+            <span class="service-num">#01</span>
+            <span class="service-label">Full-Stack Development</span>
+          </div>
+          <div class="service-box">
+            <span class="service-num">#02</span>
+            <span class="service-label">Artificial Intelligence</span>
+          </div>
+          <div class="service-box">
+            <span class="service-num">#03</span>
+            <span class="service-label">RAG & System Architecture</span>
+          </div>
+          <div class="service-box">
+            <span class="service-num">#04</span>
+            <span class="service-label">Product Engineering</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scroll Spacer: Allows deliberate, cinematic zoom scrubbing -->
+    <div class="scrub-spacer" aria-hidden="true"></div>
+
+    <!-- SECTION 2: ABOUT SECTION -->
+    <section id="about" class="section-glass">
+      <div class="glass-container">
+        
+        <div class="section-header-block">
+          <span class="badge-tag">ABOUT ME</span>
+          <h2 class="section-heading">Building technology.<br>Solving problems.<br><span class="accent-text">Creating impact.</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-col">
+            <p class="about-lead">
+              I'm a third-year Artificial Intelligence and Data Science student passionate about full-stack development, artificial intelligence, and entrepreneurship.
+            </p>
+            <p class="about-body">
+              I enjoy transforming ideas into real-world applications, developing seamless user experiences, and building intelligent solutions using modern technologies.
+            </p>
+            <p class="about-body">
+              My goal is to combine software engineering and AI to create products that make a meaningful difference.
+            </p>
+          </div>
+
+          <div class="about-meta-col">
+            <div class="meta-card">
+              <span class="meta-label">ROLE</span>
+              <span class="meta-value">Full-Stack & AI Developer</span>
+            </div>
+            <div class="meta-card">
+              <span class="meta-label">FOCUS</span>
+              <span class="meta-value">Intelligent Products & SaaS</span>
+            </div>
+            <div class="meta-card">
+              <span class="meta-label">EDUCATION</span>
+              <span class="meta-value">B.Tech AI & Data Science (Year 3)</span>
+            </div>
+            <div class="meta-card">
+              <span class="meta-label">LOCATION</span>
+              <span class="meta-value">Chennai, India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Stack -->
+        <div class="tech-stack-container">
+          <h3 class="stack-section-title">Technical Mastery & Stack</h3>
+          
+          <div class="stack-grid">
+            <!-- Frontend -->
+            <div class="stack-category">
+              <div class="category-header">
+                <span class="category-dot"></span>
+                <span class="category-name">Frontend</span>
+              </div>
+              <div class="category-chips">
+                <span class="tech-chip">HTML</span>
+                <span class="tech-chip">CSS</span>
+                <span class="tech-chip">JavaScript</span>
+                <span class="tech-chip highlight">React.js</span>
+              </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="stack-category">
+              <div class="category-header">
+                <span class="category-dot"></span>
+                <span class="category-name">Backend</span>
+              </div>
+              <div class="category-chips">
+                <span class="tech-chip highlight">Python</span>
+                <span class="tech-chip highlight">FastAPI</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">Express.js</span>
+              </div>
+            </div>
+
+            <!-- Database -->
+            <div class="stack-category">
+              <div class="category-header">
+                <span class="category-dot"></span>
+                <span class="category-name">Database</span>
+              </div>
+              <div class="category-chips">
+                <span class="tech-chip">MySQL</span>
+                <span class="tech-chip highlight">PostgreSQL</span>
+              </div>
+            </div>
+
+            <!-- AI & Data Science -->
+            <div class="stack-category">
+              <div class="category-header">
+                <span class="category-dot"></span>
+                <span class="category-name">AI & Data Science</span>
+              </div>
+              <div class="category-chips">
+                <span class="tech-chip highlight">Generative AI</span>
+                <span class="tech-chip highlight">RAG</span>
+                <span class="tech-chip">NumPy</span>
+                <span class="tech-chip">Pandas</span>
+                <span class="tech-chip">Matplotlib</span>
+              </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="stack-category">
+              <div class="category-header">
+                <span class="category-dot"></span>
+                <span class="category-name">Tools</span>
+              </div>
+              <div class="category-chips">
+                <span class="tech-chip">Git</span>
+                <span class="tech-chip">GitHub</span>
+                <span class="tech-chip">Docker</span>
+                <span class="tech-chip">VS Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: PROJECTS SECTION -->
+    <section id="projects" class="section-glass">
+      <div class="glass-container">
+        
+        <div class="section-header-block">
+          <span class="badge-tag">PORTFOLIO</span>
+          <h2 class="section-heading">Things I've Built.</h2>
+          <p class="section-subheading">Real projects. Practical solutions. Continuous innovation.</p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- PROJECT 01: GENVIB -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/genvib.jpg" alt="GENVIB Event Management Platform interface" loading="lazy">
+              <div class="project-overlay-pill">PROJECT 01</div>
+            </div>
+            <div class="project-details">
+              <div class="project-header-row">
+                <h3 class="project-name">GENVIB &bull; Event Management Platform</h3>
+                <a href="https://www.genvib.in/" target="_blank" rel="noopener noreferrer" class="project-ext-link" title="Open Genvib live website">
+                  <span>Visit Website</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+              <p class="project-summary">
+                A modern event discovery and ticketing platform designed to connect event organizers and attendees. Built with event publishing, ticket booking, QR-based entry, organizer dashboards, and event management features.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tag">React.js</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Cloudinary</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: MENAGA BEAUTY STUDIO -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/menaga.png" alt="Menaga Beauty Studio Business Website interface" loading="lazy">
+              <div class="project-overlay-pill">PROJECT 02</div>
+            </div>
+            <div class="project-details">
+              <div class="project-header-row">
+                <h3 class="project-name">Menaga Beauty Studio &bull; Business Website</h3>
+                <a href="https://www.menagabeautystudio.in/" target="_blank" rel="noopener noreferrer" class="project-ext-link" title="Open Menaga Beauty Studio live website">
+                  <span>Visit Website</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+              <p class="project-summary">
+                A modern business website created to establish a digital presence, showcase beauty services, and provide visitors with a seamless browsing experience.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Responsive UI</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: AI-POWERED RAG CHATBOT -->
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/rag-project.jpg" alt="AI Document Intelligence RAG Platform interface" loading="lazy">
+              <div class="project-overlay-pill">PROJECT 03</div>
+            </div>
+            <div class="project-details">
+              <div class="project-header-row">
+                <h3 class="project-name">AI Document Intelligence</h3>
+                <a href="#contact" class="project-ext-link" title="Contact Sujith for live demo / code walkthrough">
+                  <span>Inquire Demo</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+              <p class="project-summary">
+                An intelligent document question-answering application that uses Retrieval-Augmented Generation to retrieve relevant information and generate contextual answers from uploaded documents.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">React</span>
+                <span class="tag">ChromaDB</span>
+                <span class="tag">Gemini</span>
+                <span class="tag">Llama</span>
+                <span class="tag">Qwen</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CONTACT SECTION -->
+    <section id="contact" class="section-glass">
+      <div class="glass-container contact-box">
+        
+        <span class="badge-tag">LET'S CONNECT</span>
+        <h2 class="contact-main-heading">Let's Build Something<br><span class="accent-text">Together.</span></h2>
+        <p class="contact-main-desc">
+          Have an idea, a project, or an opportunity? Let's connect and turn it into something meaningful.
+        </p>
+
+        <div class="contact-actions-row">
+          <a href="mailto:sujithlogu22@gmail.com" class="btn-touch-orange">
+            <span>Get in touch</span>
+            <span class="touch-arrow-white">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                <path d="M2 5H8M8 5L5 2M8 5L5 8" stroke="#ff6b35" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+
+          <a href="https://github.com/sujith-l" target="_blank" rel="noopener noreferrer" class="btn-secondary-link">
+            <span>View GitHub</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+
+          <a href="https://www.linkedin.com/in/sujith-l-0b8470329" target="_blank" rel="noopener noreferrer" class="btn-secondary-link">
+            <span>LinkedIn</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="contact-direct-info">
+          <div class="direct-item">
+            <span class="direct-lbl">EMAIL</span>
+            <a href="mailto:sujithlogu22@gmail.com" class="direct-val">sujithlogu22@gmail.com</a>
+          </div>
+          <div class="direct-separator">&bull;</div>
+          <div class="direct-item">
+            <span class="direct-lbl">LOCATION</span>
+            <span class="direct-val">Chennai, India</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <span class="footer-logo">SUJITH</span>
+        <div class="footer-socials">
+          <a href="https://github.com/sujith-l" target="_blank" rel="noopener noreferrer" class="footer-social-link">GitHub</a>
+          <span class="footer-dot">&bull;</span>
+          <a href="https://www.linkedin.com/in/sujith-l-0b8470329" target="_blank" rel="noopener noreferrer" class="footer-social-link">LinkedIn</a>
+        </div>
+        <span class="footer-copy">&copy; 2026 Sujith. All rights reserved.</span>
+        <a href="#hero" class="footer-link">Back to top &uarr;</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Floating HUD Scrubber: shows live frame counter & progress -->
+  <div class="hud-pill" id="hud-pill" title="Scroll or click to scrub video frames">
+    <span class="hud-indicator"></span>
+    <span class="hud-label" id="hud-frame-label">001 / 238</span>
+    <div class="hud-track" id="hud-scrub-track">
+      <div class="hud-fill" id="hud-scrub-fill"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
